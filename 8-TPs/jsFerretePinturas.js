@@ -8,7 +8,7 @@ var temperatura;
 var centigrados;
 temperatura=document.getElementById("Temperatura").value;
 temperatura=parseInt(temperatura);
-centigrados=temperatura/32
+centigrados=(temperatura-32)/1.8
 alert("los grados Fahrenheit pasarìan a: " + centigrados + " grados centigrados");
 }
 
@@ -18,6 +18,6 @@ var temperatura;
 var Fahrenheit;
 temperatura=document.getElementById("Temperatura").value;
 temperatura=parseInt(temperatura);
-Fahrenheit=temperatura*32
+Fahrenheit=(temperatura*1.8)+32
 alert("los grados Fahrenheit pasarìan a: " + Fahrenheit + " grados Fahrenheit");	
 }
