@@ -12,6 +12,5 @@ numero1 = parseInt(numero1)
 numero2 = parseInt(numero2)
 suma = numero1 + numero2
 alert ("la suma es: " + suma)
-
 }
 
