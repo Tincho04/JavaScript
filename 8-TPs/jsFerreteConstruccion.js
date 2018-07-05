@@ -30,13 +30,15 @@ function Materiales ()
 {
 var largo;
 var ancho;
+var area;
 var cemento;
 var cal;
 largo=document.getElementById("Largo").value;
 ancho=document.getElementById("Ancho").value;
 largo=parseInt(largo);
 ancho=parseInt(ancho);
-cemento=(largo*ancho)*2;
-cal=(largo*ancho)*3;
-alert("el cemento necesario es: " + cemento + "y la cal necesaria es: " +cal);
+area=largo*ancho
+cemento=area*2;
+cal=area*3;
+alert("el cemento necesario son: " + cemento + " bolsas" + " y la cal necesaria: " +cal + " bolsas");
 }
