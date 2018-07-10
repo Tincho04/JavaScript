@@ -2,17 +2,20 @@ function mostrar()
 {
 //tomo la edad  
 var edad;
+var msg;
 edad=document.getElementById("edad").value;
 if(edad>=18)
 {
-    alert("Usted es un adulto");
+     msg=("Usted es un adulto");
+} else {
+    if(edad<13)
+    {    
+        msg=("Usted es un niño");
+    }
+    else
+    {
+        msg=("Usted es un adolescente");
+    }
 }
-if(edad>=13 && edad<=17)
-{
-    alert("Usted es adolescente");
-}
-if(edad<13)
-{
-    alert("Usted es un niño");
-}
+alert(msg);
 }//FIN DE LA FUNCIÓN
