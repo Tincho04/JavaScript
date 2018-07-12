@@ -6,26 +6,26 @@ var ContadorDePerdidas=0;
 function comenzar()
 {
 eleccionMaquina=Math.floor(Math.random()*(3)+1);
-eleccionMaquina=parseInt(eleccionMaquina);
-console.log(eleccionMaquina)  // 1-piedra, 2-papel, 3-tijera
+eleccionMaquina=parseInt(eleccionMaquina);         // 1-piedra, 2-papel, 3-tijera
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-if (eleccionMaquina==1){
-    alert("empató");
-	ContadorDeEmpates=ContadorDeEmpates+1;
-}else if(eleccionMaquina==2){
-    alert("perdió");
-	ContadorDePerdidas=ContadorDePerdidas+1;
-} else {
-    alert("ganó");
-	ContadorDeGanadas=ContadorDeGanadas+1;
-}
-eleccionMaquina=Math.floor(Math.random()*(3)+1);
-eleccionMaquina=parseInt(eleccionMaquina);
-
+	if (eleccionMaquina==1){
+		alert("empató");
+		ContadorDeEmpates=ContadorDeEmpates+1;
+	}else if(eleccionMaquina==2){
+		alert("perdió");
+		ContadorDePerdidas=ContadorDePerdidas+1;
+	} else {
+		alert("ganó");
+		ContadorDeGanadas=ContadorDeGanadas+1;
+	}
+	eleccionMaquina=Math.floor(Math.random()*(3)+1);
+	eleccionMaquina=parseInt(eleccionMaquina);
+		
+		mostrarResultado()
 }//FIN DE LA FUNCIÓN
 function papel()
 {
@@ -39,6 +39,7 @@ if (eleccionMaquina==1){
     alert("perdió");
 	ContadorDePerdidas=ContadorDePerdidas+1;
 }
+       mostrarResultado()
 eleccionMaquina=Math.floor(Math.random()*(3)+1);
 eleccionMaquina=parseInt(eleccionMaquina);
 }//FIN DE LA FUNCIÓN

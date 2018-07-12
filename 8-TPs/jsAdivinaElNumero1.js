@@ -30,7 +30,6 @@ function verificar()
   if(numero==numeroSecreto)
   {
     document.getElementById("intentos").value=("Usted es un ganador!!! y solo le tomó " + contador + " Intentos");
-
   } else if(numero>numeroSecreto)
   { 
     document.getElementById("intentos").value=("Se pasó");
@@ -38,5 +37,4 @@ function verificar()
    {
      document.getElementById("intentos").value=("Le falta");
    }
-	
 }
