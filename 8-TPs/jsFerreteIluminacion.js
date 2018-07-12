@@ -21,55 +21,64 @@ function CalcularPrecio ()
 
     lampara=document.getElementById("Cantidad").value;
     marca=document.getElementById("Marca").value;
-    precio=lampara*35
     lampara=parseInt(lampara);
+    precio=lampara*35
+
 
     
-     if (lampara>=6){
-         descuento=(precio*50)/100
+     if (lampara>=6){                                     // ejercicio a
+         descuento=(precio*50)/100;
+         console.log(descuento);
          msg=("el descuento es de: " + descuento);
     }
 
-    if (lampara==5 && marca!="Argentinaluz"){
-        descuento=(precio*30)/100
-        msg=("el descuento es de: " + descuento);
-    }else{
+
+    if (lampara==5 && marca=="ArgentinaLuz"){             // ejercicio b
         descuento=(precio*40)/100
         msg=("el descuento es de: " + descuento);
+    }else
+    {if(lampara==5 && marca!="ArgentinaLuz")
+        {descuento=(precio*30)/100
+        msg=("el descuento es de: " + descuento);}
     }
 
-
-    if (lampara==4 && marca=="ArgentinaLuz" || marca=="FelipeLamparas"){
+    if ((marca=="ArgentinaLuz" || marca=="FelipeLamparas") && lampara==4)   // ejercicio c
+    { 
         descuento=(precio*25)/100
         msg=("el descuento es de: " + descuento);
     }else
-    {
-        descuento=(precio*20)/100
+    {if ((marca!="ArgentinaLuz" || marca!="FelipeLamparas") && lampara==4)
+        {descuento=(precio*20)/100
         msg=("el descuento es de: " + descuento);
     }
+    }
    
-   
-   if (lampara==3 && marca=="ArgentinaLuz"){
+    if(lampara==3 && marca=="ArgentinaLuz")                   // ejercicio d
+        { 
         descuento=(precio*15)/100
+        msg=("el descuento es de: " + descuento);   
+        }else
+    {
+        if(lampara==3 && marca=="FelipeLamparas")
+        { 
+        descuento=(precio*10)/100
         msg=("el descuento es de: " + descuento);
-    }else
-    {if(lampara==3 && marca=="FelipeLamparas");
-         { descuento=(precio*10)/100
-    msg=("el descuento es de: " + descuento);
         }else
         {
-        descuento=(precio*5)/100
-        msg=("el descuento es de: " + descuento);
+            if(lampara==3 && (marca!="FelipeLamparas" || marca!="ArgentinaLuz"))
+               { descuento=(precio*5)/100
+                msg=("el descuento es de: " + descuento);
+        }
         }
    
    
-        importef=precio-descuento;
+        importef=precio-descuento;                                // ejercicio e
         if(importef>120)
         {
             ingresos=(importef*10)/100
             final=importef+ingresos
             alert("IIBB Usted pagó: " + final + " siendo " + ingresos + "el impuesto que se pagó")
         }
+}
 document.getElementById("precioDescuento").value=msg;
 }
-
