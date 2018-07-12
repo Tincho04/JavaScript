@@ -39,9 +39,9 @@ if (eleccionMaquina==1){
     alert("perdió");
 	ContadorDePerdidas=ContadorDePerdidas+1;
 }
-       mostrarResultado()
 eleccionMaquina=Math.floor(Math.random()*(3)+1);
 eleccionMaquina=parseInt(eleccionMaquina);
+       mostrarResultado()
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
@@ -57,11 +57,12 @@ if (eleccionMaquina==1){
 }
 eleccionMaquina=Math.floor(Math.random()*(3)+1);
 eleccionMaquina=parseInt(eleccionMaquina);
+        mostrarResultado()
 }//FIN DE LA FUNCIÓN
 
 function mostrarResultado()
 {
 document.getElementById("ganadas").value=("Usted ha ganado " + ContadorDeGanadas + " veces");
-document.getElementById("perdidas").value=("Usted ha ganado " + ContadorDePerdidas + " veces");
+document.getElementById("perdidas").value=("Usted ha perdido " + ContadorDePerdidas + " veces");
 document.getElementById("empatadas").value=("Usted ha empatado " + ContadorDeEmpates + " veces");
 }

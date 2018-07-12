@@ -31,9 +31,15 @@ function verificar()
   numero=parseInt(numero);
   contador=contador+1;
   edad=prompt("Ingrese su edad");
-  if(numero==numeroSecreto)
+  if(numero==numeroSecreto && edad>=18)
   {
     document.getElementById("intentos").value=("Usted es un ganador!!! y solo le tomó " + contador + " Intentos");
+    mayor=mayor+1;
+    alert("La cantidad de veces que un mayor de edad ha ganado han sido: " + mayor);
+  }else if(numero==numeroSecreto && edad<18){
+    document.getElementById("intentos").value=("Usted es un ganador!!! y solo le tomó " + contador + " Intentos");
+    menor=menor+1;
+    alert("La cantidad de veces que un menor de edad ha ganado han sido: " + menor);
   } else if(numero>numeroSecreto)
   { 
     document.getElementById("intentos").value=("Se pasó");
@@ -41,12 +47,5 @@ function verificar()
    {
      document.getElementById("intentos").value=("Le falta");
    }
-if (numero==numeroSecreto && edad>=18)
-{
-    mayor=mayor+1;
-    alert("La cantidad de veces que un mayor de edad ha ganado han sido: " + mayor);
-}else if (numero==numeroSecreto && edad<18){
-    menor=menor+1;
-    alert("La cantidad de veces que un menor de edad ha ganado han sido: " + menor);
-}
+
 }
