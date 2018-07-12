@@ -27,28 +27,34 @@ function CalcularPrecio ()
 
     
      if (lampara>=6){                                     // ejercicio a
-         descuento=(precio*50)/100;
-         console.log(descuento);
+         descuento=(precio*50)/100; 
+         descuento=precio-descuento;
          msg=("el descuento es de: " + descuento);
     }
 
 
     if (lampara==5 && marca=="ArgentinaLuz"){             // ejercicio b
         descuento=(precio*40)/100
+        descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);
     }else
     {if(lampara==5 && marca!="ArgentinaLuz")
-        {descuento=(precio*30)/100
+        {
+         descuento=(precio*30)/100
+         descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);}
     }
 
     if ((marca=="ArgentinaLuz" || marca=="FelipeLamparas") && lampara==4)   // ejercicio c
     { 
         descuento=(precio*25)/100
+        descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);
     }else
     {if ((marca!="ArgentinaLuz" || marca!="FelipeLamparas") && lampara==4)
-        {descuento=(precio*20)/100
+        {
+         descuento=(precio*20)/100
+         descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);
     }
     }
@@ -56,17 +62,20 @@ function CalcularPrecio ()
     if(lampara==3 && marca=="ArgentinaLuz")                   // ejercicio d
         { 
         descuento=(precio*15)/100
+        descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);   
         }else
     {
         if(lampara==3 && marca=="FelipeLamparas")
         { 
         descuento=(precio*10)/100
+        descuento=precio-descuento;
         msg=("el descuento es de: " + descuento);
         }else
         {
             if(lampara==3 && (marca!="FelipeLamparas" || marca!="ArgentinaLuz"))
                { descuento=(precio*5)/100
+                 descuento=precio-descuento;
                 msg=("el descuento es de: " + descuento);
         }
         }
