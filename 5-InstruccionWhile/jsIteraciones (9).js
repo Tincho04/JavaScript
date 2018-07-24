@@ -2,6 +2,7 @@ function mostrar()
 {
 
 	var contador=0;
+	var 
 	// declarar variables
 	
 	var respuesta='si';
