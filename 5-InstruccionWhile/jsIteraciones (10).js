@@ -11,6 +11,7 @@ function mostrar()
 	var promenega;
 	var resta;
 	var numero;
+	var msg;
 	//declarar contadores y variables 
 	
 	var respuesta="si";
@@ -19,6 +20,10 @@ function mostrar()
 	{
 	numero=parseInt(prompt("Ingrese su numero"));	
 	respuesta=prompt("¿Desea continuar?");
+
+	while(isNaN(numero)){	numero=parseInt(prompt("Ingrese su numero"));	
+	respuesta=prompt("¿Desea continuar?");
+}
 
 	if(numero==0){
 		cantcero++ }else
@@ -35,7 +40,15 @@ function mostrar()
 		} 
 promeposi=sumaposi/cantposi;
 promenega=sumanega/cantnega;
-resta=sumaposi-sumanega;
+dif=cantposi-cantnega;
+if(dif>0){
+    msg=("Hay mas Positivos que Negativos por: " + dif);}else
+	if (dif==0){
+		msg=("Hay la misma cantidad de Positivos que de Negativos");
+	}else 
+	if(dif<0){
+    msg=("Hay mas Negativos que Positivos por: " + dif*-1);}
+	
 document.write(" Suma de negativos: " + sumanega + "<br>"  );
 document.write(" Suma de positivos: " + sumaposi + "<br>");
 document.write(" Cantidad de positivos: " + cantposi + "<br>");
@@ -44,5 +57,5 @@ document.write(" Cantidad de ceros: " + cantcero + "<br>");
 document.write(" Cantidad de pares: " + cantpar + "<br>");
 document.write(" Promedio de Positivos: " + promeposi + "<br>");
 document.write(" Promedio de Negativos: " + promenega + "<br>");
-document.write(" Diferencia entre positivos y negativos: " + resta);
+document.write(msg);
 }//FIN DE LA FUNCIÓN
