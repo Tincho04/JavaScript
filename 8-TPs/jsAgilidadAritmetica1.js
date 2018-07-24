@@ -18,6 +18,7 @@ numero1=parseInt(numero1);
 numero2=parseInt(numero2);
 calculo=Math.floor(Math.random()*(4)+1);
 
+
 }//FIN DE LA FUNCIÓN
 function Responder()
 {
