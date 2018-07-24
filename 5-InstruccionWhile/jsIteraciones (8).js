@@ -5,6 +5,7 @@ function mostrar()
 	var suma=0;
 	var multiplicacion=1;
 	var respuesta='si';
+	var acumulador;
 while(respuesta=="si"){
 	acumulador=prompt("Ingrese su numero");
 	acumulador=parseInt(acumulador);
