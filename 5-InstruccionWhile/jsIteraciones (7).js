@@ -20,9 +20,9 @@ document.getElementById('promedio').value=suma/contador;
 
 
 
-// while (true){
-// cont ++
-// if (respuesta=="no"){
-//	break
-//}	
-//}      evita el pedir respuesta y 2 prompt
+/* while (true){
+ cont ++
+ if (respuesta=="no"){
+	break
+}	
+}      evita el pedir respuesta y 2 prompt*/
