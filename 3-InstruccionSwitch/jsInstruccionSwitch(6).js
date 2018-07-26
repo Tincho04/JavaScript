@@ -25,7 +25,6 @@ switch(laHora){
         case "21":
         case "22":
         case "23":
-        case "24":
         case "0":
         case "1":
         case "2":
