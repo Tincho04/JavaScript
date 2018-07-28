@@ -16,6 +16,7 @@ console.log(eleccionMaquina)  // 1-piedra, 2-papel, 3-tijera
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
+    console.log(eleccionMaquina)
 if (eleccionMaquina==1){
     alert("empató");
 }else if(eleccionMaquina==2){
@@ -29,6 +30,8 @@ eleccionMaquina=parseInt(eleccionMaquina);
 }//FIN DE LA FUNCIÓN
 function papel()
 {
+    console.log(eleccionMaquina)
+
 if (eleccionMaquina==1){
     alert("ganó");
 }else if(eleccionMaquina==2){
@@ -41,6 +44,7 @@ eleccionMaquina=parseInt(eleccionMaquina);
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
+    console.log(eleccionMaquina)
 if (eleccionMaquina==1){
     alert("perdió");
 }else if(eleccionMaquina==2){
