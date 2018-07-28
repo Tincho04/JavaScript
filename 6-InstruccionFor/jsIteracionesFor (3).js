@@ -6,7 +6,7 @@ var cont;
 var mensaje="Hola UTN FRA";
 
 repeticiones=parseInt(repeticiones)
-for (cont=0; cont>=repeticiones; cont++)
+for (cont=0; cont<repeticiones; cont++)
     {alert(mensaje);
     }
 }//FIN DE LA FUNCIÓN
