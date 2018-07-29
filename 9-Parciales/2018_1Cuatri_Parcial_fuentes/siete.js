@@ -33,12 +33,9 @@ for (cont=0;cont<5;cont++)
     }
 
     }
-
-
 promedio=acum/cont
-alert(promedio)
-
+alert("el promedio de notas es: " + promedio)
+alert("la nota mas baja es: " + min + " y el sexo de esa nota es: " + sexmin);
+alert("la cantidad de varones cuya nota es 6 o mas es de: " + contm6);
 }
 
-alert("la nota mas baja es: " + min + "y el sexo de esa nota es: " + sexmin);
-alert("la cantidad de varones cuya nota es 6 o mas es: " + contm6);
