@@ -23,19 +23,20 @@ var par;
 par=pares;
 
 
-while (par>=1){
+while (par>=2){
     if (pares%2!=0){
-        par=par-1
+        par=par-1;
         document.write("<br> " + par);
     }else{
         document.write("<br> " + par)
-        par=par-2    
+        par=par-2;   
     }
     }
 
 /*    if (pares%2==0){
     document.write("<br> " + par);
     par=par-2
+    document.write("<br> " + par);
 }else{
     par=par-1
     document.write("<br> " + par)
