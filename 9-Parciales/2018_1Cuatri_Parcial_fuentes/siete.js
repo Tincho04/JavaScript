@@ -6,7 +6,6 @@ var cantf=0, cantm=0;
 var menores=0, mayores=0, mayorm=0;
 var edadmin=101, edadmax=0;
 var sumf=0, summ=0, sumt=0;
-var contf=0, contm=0;
 var promf=0, promm=0, promt=0;
 var nombrev, nombrej;
 var sexov, mujerv;
@@ -29,42 +28,40 @@ while(edad>=101 || edad<=0 || isNaN(edad))
     edad=parseInt(edad);
     }
 
-if (sexo=="F"){
+if (sexo=="F"){                         // 1
     cantf++;
     sumf=sumf+edad;
-    contf++
 }else {
-    cantm++;
+    cantm++;                            // 2
     summ=summ+edad;
-    contm++
+    if(edad>18){                       // 4.1
+        mayorm++
+    }
 }
-if(edad>18){
+if(edad>18){                           // 3, 4
     mayores++;
 }else {
     menores++;
 }
-if(edad>18 && sexo=="M"){
-mayorm++;
-}
 
-if(edad<edadmin){
+if(edad<edadmin){                    // 5, 11
     edadmin=edad;
     nombrej=nombre;
 }
-if(edad>edadmax){
+if(edad>edadmax){                    // 6, 10, 12
     edadmax=edad;
     nombrev=nombre;
     sexov=sexo;
-    if(sexo=="F"){
+    if(sexo=="F"){                  // 13
         mujerv=nombre;
     }
 }
 
-sumt=sumf+summ;
+sumt=sumf+summ;                         
 
-promf=sumf/contf;
-promm=summ/contm;
-promt=sumt/cont;
+promf=sumf/cantf;                  // 7 
+promm=summ/cantm;                 // 8 
+promt=sumt/cont;                  // 9 
 
 
 }
