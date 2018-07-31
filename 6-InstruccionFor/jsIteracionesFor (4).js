@@ -1,12 +1,15 @@
 function mostrar()
 {
 var cont;
-var mensaje;
+var numero=0;
 
-for (cont=0; cont!=1; cont+0){
-    mensaje=prompt("Utilice BREAK para detener el mensaje");
-if (mensaje=="BREAK"){
-    cont=1;
-}
-}
+for (cont=0; ; cont++){
+    console.log(numero);
+    numero++
+    if (numero==10){
+    break;
+
+    }
+ }
+    alert("Usted ha salido del bucle");
 }//FIN DE LA FUNCIÓN
