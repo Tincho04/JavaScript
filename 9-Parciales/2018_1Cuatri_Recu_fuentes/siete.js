@@ -53,6 +53,7 @@ for(cont=0; cont<5; cont++)
             sexoj=sexo;
             notaj=nota;
             }
+        if()
     }
 promenot=sumanot/cont;
 document.write("El promedio de las notas totales es de: " + promenot);
@@ -61,3 +62,6 @@ document.write("<br>" + "La cantidad de varones mayores de 18 cuya nota ha sido 
 document.write("<br>" + "El sexo y la nota de la persona mas joven es: " + sexoj + " y " + notaj);
 document.write("<br>" + "");
 }
+
+
+// bandera para primera mujer
