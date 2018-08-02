@@ -5,7 +5,7 @@ var sumanot=0, promenot, cont;
 var notamin=11, sexomin;
 var varmay6=0;
 var edadmin, sexoj, notaj; 
-var pmujered, pmujernot;
+var var bandem=true, pmujered, pmujernot;
 
 for(cont=0; cont<5; cont++)
     {
@@ -53,14 +53,19 @@ for(cont=0; cont<5; cont++)
             sexoj=sexo;
             notaj=nota;
             }
-        if()
+        if(bandem==true && sexo="f")
+            {
+                pmujered=edad;
+                pmujernot=nota;
+                bandem==false;
+            }
     }
 promenot=sumanot/cont;
 document.write("El promedio de las notas totales es de: " + promenot);
 document.write("<br>" + "La nota y el sexo de la nota mas baja son: " + notamin + " y " + sexomin);
 document.write("<br>" + "La cantidad de varones mayores de 18 cuya nota ha sido 6 o mas es de: " + varmay6);
 document.write("<br>" + "El sexo y la nota de la persona mas joven es: " + sexoj + " y " + notaj);
-document.write("<br>" + "");
+document.write("<br>" + "La edad y la nota de la primer mujer ingresada son: " + pmujered + " y " + pmujernot);
 }
 
 
