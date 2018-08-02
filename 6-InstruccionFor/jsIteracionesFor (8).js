@@ -1,7 +1,7 @@
 function mostrar()
 {
-var numero, contdiv=0, i;
-var primo=0, prim;
+var numero, i;
+var primo=0, prim=0;
 
 numero=prompt("ingrese su numero.");
 numero=parseInt(numero);
@@ -18,12 +18,14 @@ for(i=1; i<=numero; i++){
         } else{
         if(j%i!=0){
         primo++;
-        }
-        prim=i;
-        console.log(prim);
-        break;
+
+      }
         }
     }
+        prim=j;
+        console.log(prim);
+        break;
+ 
 }
 console.log("hay tantos primos como: " + primo);
 }//FIN DE LA FUNCIÓN
