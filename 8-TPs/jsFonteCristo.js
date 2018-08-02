@@ -9,5 +9,31 @@ e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos
 */
 function ComenzarIngreso () 
 {
- 	
+var numero;
+var nropar, varimpar,
+
+numero=document.getElementById("numero").value;
+numero=parseInt("numero");
+if(numero<0 || isNaN(numero))
+    {
+        alert("Ingrese un numero valido");
+        numero=document.getElementById("numero").value;
+        numero=parseInt("numero");
+    }
+
+
 }
+
+function NumerosPares ()
+
+{
+for(let i=numero; i<=numero; i++)
+    {
+        if(i%2==0)
+        nropar=i;
+        console.log(nropar)
+    }
+
+
+}
+
