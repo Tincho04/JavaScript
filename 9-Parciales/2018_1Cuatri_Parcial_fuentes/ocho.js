@@ -47,7 +47,7 @@ numero=parseInt(prompt("Ingrese un número"));
 
 anuncio=prompt("¿Desea continuar?");
 if (anuncio=="no"){
-    cont++
+    cont++;
 }
 
 }
