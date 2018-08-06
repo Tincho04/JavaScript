@@ -1,64 +1,62 @@
 function mostrar()
 {
-var letra;
-var numero;
-var anuncio;
-var cont;
-var pares=0;
-var impares=0;
-var ceros=0;
-var cantposi=0;
-var posi=0;
-var promposi;
+var letra, numero;
+var informe;
+var pares=0, impares=0, ceros=0;
+var sumaposi=0, contposi=0, promeposi; 
 var sumanega=0;
-var letramax;
-var letramin;
-var max=-100;
-var min=100;
+var max=-101, letramax, min=101, letramin;
 
-for(cont=0; cont<1; cont+0)
+while(informe!="no")
 {
 letra=prompt("Ingrese una letra");
-numero=parseInt(prompt("Ingrese un número"));
-    if(numero<-100 || numero>100){
-        numero=parseInt(prompt("Ingrese un número válido"));
+numero=prompt("Ingrese un numero");
+numero=parseInt(numero);
+while(isNaN(numero) || numero<-100 || numero>100)
+    {
+        numero=prompt("Ingrese un numero valido");
+        numero=parseInt(numero);
     }
-    if(numero==0){
-        ceros++;
-        }else if(numero%2==0){
-          pares++;
-        }else{
-           impares++;
+if(numero%2==0)
+    {
+        pares++;
+    }else
+        {
+            impares++;
         }
-    if(numero>=0 && numero<100){
-       posi=posi+numero;
-       cantposi++;
-        }else if(numero<0){
+if(numero==0)
+    {
+        ceros++;
+    }
+if(numero>=0)
+    {
+        contposi++;
+        sumaposi=sumaposi+numero;
+    }else
+        {
             sumanega=sumanega+numero;
-        }    
-    if(numero>max){
+        }
+if(numero>max)
+    {
         max=numero;
         letramax=letra;
     }
-    if(numero<min){
+if(numero<min)
+    {
         min=numero;
         letramin=letra;
     }
 
-anuncio=prompt("¿Desea continuar?");
-if (anuncio=="no"){
-    cont++;
-}
+informe=prompt("¿desea continuar? (para salir escriba: no)");
+informe=informe.toLowerCase();
 
 }
-
-promposi=posi/cantposi;
-
-document.write("<br>" + "Cantidad de numeros pares: " + pares);
-document.write("<br>" + "Cantidad de numeros impares: " + impares);
-document.write("<br>" + "Cantidad de ceros: " + ceros);
-document.write("<br>" + "Promedio de numeros positivos: " + promposi);
-document.write("<br>" + "Suma de numeros negativos: " + sumanega);
-document.write("<br>" + "El número máximo es: " + max + " Y su respectiva letra es: " + letramax);
-document.write("<br>" + "El número mínimo es: " + min + " Y su respectiva letra es: " + letramin);
+promeposi=sumaposi/contposi;
+document.write("La cantidad de numeros pares es de: " + pares);
+document.write("<br>" + "La cantidad de numeros impares es de: " + impares);
+document.write("<br>" + "La cantidad de ceros es de: " + ceros);
+document.write("<br>" + "El promedio de los numeros positivos es de: " + promeposi);
+document.write("<br>" + "La suma de los numeros negativos es de: " + sumanega);
+document.write("<br>" + "El numero y letra de máximo valor son: " + max + " y " + letramax);
+document.write("<br>" + "El numero y letra de minimo valor son: " + min + " y " + letramin);
 }

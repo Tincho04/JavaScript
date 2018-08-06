@@ -2,23 +2,23 @@ function mostrar()
 {
 var planeta;
 planeta=prompt("Ingrese un planeta del sistema solar");
-
+planeta=planeta.toLowerCase();
 switch(planeta){
-    case "tierra":
-                  alert("Acá vivimos");
+  case "tierra":
+                alert("Aca vivimos");
                 break;
-    case "mercurio":
-    case "venus":
-                 alert("acá hace más calor");
+  case "mercurio":
+  case "venus":
+                alert("Acá hace más calor");
                 break;
-    case "marte":
-    case "jupiter":
-    case "saturno":
-    case "urano":
-    case "neptuno":
-                alert("acá hace más frio");
-                break;
-    default:
-            alert("No es un planeta válido");
+  case "marte":
+  case "jupiter":
+  case "saturno":
+  case "urano":
+  case "neptuno":
+                 alert("Acá hace más frio");    
+                 break;
+  default: 
+           alert("Ingrese un planeta valido");
 }
 }

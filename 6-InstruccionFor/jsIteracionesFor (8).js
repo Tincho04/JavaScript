@@ -28,4 +28,4 @@ for(i=1; i<=numero; i++){
  
 }
 console.log("hay tantos primos como: " + primo);
-}//FIN DE LA FUNCIÓN
+}
